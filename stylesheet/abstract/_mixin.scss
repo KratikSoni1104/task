@@ -1,0 +1,15 @@
+//Media Queries manager
+
+@mixin respond($breakpoint) {  
+    @if $breakpoint == tab-land {
+        @media (max-width:56.25em) {@content} ;
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width:43.25em) {@content} ;
+    }
+    
+    @if $breakpoint == phone {
+        @media (max-width:31.25em) {@content} ;
+    }
+}
