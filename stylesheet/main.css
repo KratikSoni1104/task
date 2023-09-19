@@ -168,6 +168,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 43.75em) {
+  .account__details {
+    flex-wrap: wrap;
+  }
+}
 .account__details-info {
   font-weight: 600;
 }
@@ -178,6 +183,12 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+@media (max-width: 43.75em) {
+  .account__details--1, .account__details--2, .account__details--3, .account__details--4 {
+    flex: 0 0 50%;
+    margin-bottom: 1rem;
+  }
 }
 
 .query {

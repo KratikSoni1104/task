@@ -141,6 +141,11 @@
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width:43.75em) {
+            flex-wrap: wrap;
+            
+        }
+
         &-info {
             font-weight: 600;
             &-rupee-icon {
@@ -154,6 +159,11 @@
             display: flex;
             flex: 1;
             flex-direction: column;
+
+            @media (max-width:43.75em) {
+                flex:0 0 50%;
+                margin-bottom: 1rem;
+            }
         }
     }
 }
