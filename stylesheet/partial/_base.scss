@@ -1,0 +1,44 @@
+
+:root {
+    --color-primary-light:#F58F22;
+    --color-primary-dark:#EF6712;
+    --shodow-light:#DEE3F266;
+    --para:#414141;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    //box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10/16 = 62.5% , 1rem = 10px
+
+    @media (max-width:56.25em) {
+        font-size: 50%;
+    }
+
+    @media (max-width:43.75em) {
+        font-size: 37.50%;
+    }
+
+    @media (max-width:31.25rem) {
+        font-size: 31.25%;
+    }
+}
+
+body {
+    font-family: 'open sans' , sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
