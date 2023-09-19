@@ -15,19 +15,24 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 77.5em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 64em) {
   html {
     font-size: 50%;
   }
 }
-@media (max-width: 43.75em) {
+@media (max-width: 43.25em) {
   html {
-    font-size: 37.5%;
+    font-size: 43%;
   }
 }
-@media (max-width: 31.25rem) {
+@media (max-width: 32em) {
   html {
-    font-size: 31.25%;
+    font-size: 37.5%;
   }
 }
 
@@ -35,17 +40,72 @@ body {
   font-family: "open sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  background-color: #F6F6F6;
+}
+
+.f-12 {
+  font-size: 1.2rem;
+}
+
+.f-14 {
+  font-size: 1.4rem;
+}
+
+.f-16 {
+  font-size: 1.6rem;
+}
+
+.f-18 {
+  font-size: 1.8rem;
+}
+
+.f-20 {
+  font-size: 2rem;
+}
+
+.l-18 {
+  line-height: 1.8rem;
+}
+
+.l-19 {
+  line-height: 1.9rem;
+}
+
+.l-20 {
+  line-height: 2rem;
+}
+
+.l-21 {
+  line-height: 2.1rem;
+}
+
+.l-22 {
+  line-height: 2.2rem;
+}
+
+.l-24 {
+  line-height: 2.4rem;
+}
+
+.l-26 {
+  line-height: 2.6rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .container {
-  max-width: 96rem;
+  max-width: 144rem;
   background-color: #F6F6F6;
-  margin: 8rem auto;
+  margin: 0 auto;
   min-height: 50rem;
-  display: flex;
-  flex-direction: column;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 43.25em) {
   .container {
     max-width: 100%;
   }
@@ -65,7 +125,7 @@ body {
   height: 4.6rem;
   width: 22.8rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 64em) {
   .header__logo {
     height: 3.5rem;
     width: 15rem;
@@ -83,32 +143,25 @@ body {
   margin: 2.1rem 3.9rem 3rem 3.8rem;
 }
 .content__up {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1.6rem;
-  line-height: 2.1rem;
+  text-align: center;
   color: var(--para);
 }
-@media (max-width: 31.25em) {
+@media (max-width: 32em) {
   .content__up-paragraph--1, .content__up-paragraph--2 {
-    font-size: 1rem;
-    line-height: 1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
+}
+.content__up__greet {
+  margin-bottom: 1.5rem;
 }
 .content__down {
   margin: 2rem 7.75rem 0;
 }
 
 .greeting {
-  display: flex;
-  align-items: center;
-  font-size: inherit;
-  font-size: 1.6rem;
+  justify-content: center;
   font-weight: 700;
-  line-height: 2.4rem;
   margin-bottom: 0.8rem;
 }
 .greeting-text-box {
@@ -119,7 +172,7 @@ body {
   margin-right: 0.5rem;
   color: #4A4A4A;
 }
-@media (max-width: 31.25em) {
+@media (max-width: 32em) {
   .greeting-text {
     font-size: 1.4rem;
   }
@@ -129,22 +182,19 @@ body {
   width: 5.7rem;
   margin-right: 1.2rem;
 }
-@media (max-width: 31.25em) {
+@media (max-width: 32em) {
   .greeting--verify-icon {
     height: 4rem;
     width: 4rem;
   }
 }
-@media (max-width: 31.25em) {
+@media (max-width: 32em) {
   .greeting--succeed-icon {
     height: 2rem;
     width: 2rem;
   }
 }
-.greeting-paragraph {
-  margin-bottom: 1.5rem;
-}
-@media (max-width: 31.25em) {
+@media (max-width: 32em) {
   .greeting-paragraph {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -155,59 +205,28 @@ body {
   padding: 1.8rem 3rem;
   border: 0.5px solid #E9E9EA;
   border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 2.2rem;
-  font-size: 1.2rem;
-  gap: 1.8rem;
-}
-.account__details {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, auto);
   text-align: center;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  row-gap: 1.8rem;
 }
-@media (max-width: 43.75em) {
-  .account__details {
-    flex-wrap: wrap;
-  }
-}
-.account__details-info {
-  font-weight: 600;
-}
-.account__details-info-rupee-icon {
-  font-weight: 300;
-}
-.account__details--1, .account__details--2, .account__details--3, .account__details--4 {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-@media (max-width: 43.75em) {
-  .account__details--1, .account__details--2, .account__details--3, .account__details--4 {
-    flex: 0 0 50%;
-    margin-bottom: 1rem;
+@media (max-width: 32em) {
+  .account {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    row-gap: 0.5rem;
   }
 }
 
 .query {
-  padding: 3.5rem 17.6rem 0;
+  padding: 3.5rem 0 0;
   text-align: center;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: center;
-}
-@media (max-width: 31.25em) {
-  .query {
-    padding: 3.5rem 5rem;
-  }
 }
 .query__paragraph {
-  line-height: 2.2rem;
   color: var(--para);
+  margin-bottom: 1.2rem;
 }
 
 .new-greet {
@@ -236,4 +255,5 @@ body {
   letter-spacing: 0.5px;
   color: #fff;
   background-color: #F27B1A;
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */

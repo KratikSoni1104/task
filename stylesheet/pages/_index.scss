@@ -1,13 +1,12 @@
+@import "../abstract/mixin";
+
 //// CONTAINER
 .container {
-    max-width: 96rem;
+    max-width: 144rem;
     background-color: #F6F6F6;
-    margin: 8rem auto;
+    margin: 0 auto;
     min-height: 50rem;
-    display: flex;
-    flex-direction: column;
-
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         max-width: 100%;
     }
 }
@@ -47,37 +46,30 @@
     }
 
     &__up {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
-        font-size: 1.6rem;
-        line-height: 2.1rem;
+        text-align: center;
         color: var(--para);
-
-        &-paragraph--1,
-        &-paragraph--2 {
-            @include respond(phone) {
-                font-size: 1rem;
-                line-height: 1.6rem;
+        &-paragraph {
+            &--1,
+            &--2 {
+                @include respond(phone) {
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                }
             }
+        }
 
+        &__greet {
+            margin-bottom: 1.5rem;
         }
     }
-
     &__down {
         margin : 2rem 7.75rem 0;
     }
 }
 
 .greeting {
-    display: flex;
-    align-items: center;
-    font-size: inherit;
-    font-size: 1.6rem;
+    justify-content: center;
     font-weight: 700; 
-    line-height: 2.4rem;
     margin-bottom: 0.8rem;
 
     &-text-box {
@@ -111,8 +103,7 @@
         }
     }
 
-    &-paragraph {
-        margin-bottom: 1.5rem;
+    &-paragraph { 
         @include respond(phone) {
             font-size: 1.2rem;
             line-height: 1.6rem;
@@ -127,62 +118,31 @@
     padding: 1.8rem 3rem;
     border: .5px solid #E9E9EA;
     border-radius: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 2.2rem;
-    font-size: 1.2rem;
-    gap: 1.8rem;
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(4,auto);
+    text-align: center;
+    justify-content: space-between;
+    row-gap: 1.8rem;
 
-    &__details {
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include respond(tab-port) {
-            flex-wrap: wrap;
-        }
-        
-        &-info {
-            font-weight: 600;
-            &-rupee-icon {
-                font-weight: 300;
-            }
-        }
+    @include respond(phone) {
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(4, auto);
+        row-gap: .5rem;
     }
-
-    &__details {
-        &--1,&--2,&--3,&--4 {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            @include respond(tab-port) {
-                flex:0 0 50%;
-                margin-bottom: 1rem;
-            }
-            
-        }
-    }
+    
 }
+
 
 
 ////// QUERY
 
 .query {
-    padding: 3.5rem 17.6rem 0;
+    padding: 3.5rem 0 0;
     text-align: center;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: center;
-    
-    @include respond(phone) {
-        padding: 3.5rem 5rem;
-    }
+   
     &__paragraph {
-        line-height: 2.2rem;
         color: var(--para);
+        margin-bottom: 1.2rem;
     }
 }
